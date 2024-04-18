@@ -3,7 +3,7 @@ const {registerUser,authUser,logoutUser,getUserProfile,updateUserProfile} =requi
 const router = express.Router();
 
 router.post('/auth',authUser)
-router.post('/',registerUser)
+router.post('/registerUser',registerUser)
 router.post('/auth',authUser)
 router.post('/logout',logoutUser)
 router.route('/profile').get(getUserProfile).put(updateUserProfile);

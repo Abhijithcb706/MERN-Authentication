@@ -6,6 +6,9 @@ const {notFound,errorHandler} = require('./middlewares/errorMiddleware');
 const connectDB = require("./config/db");
 const port = process.env.PORT || 5000;
 
+app.use(express.json())
+app.use(express.urlencoded({extended: true}));
+
 
 app.use('/user',userRoutes)
 
