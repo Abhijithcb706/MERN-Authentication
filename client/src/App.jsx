@@ -1,14 +1,18 @@
-import Header from '../components/Header'
-
-const App =()=>{
-  return(
-<>
-
-<Header/>
-<h2>Mern-Authentication</h2>
-</>
-
-
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Header from './components/Header'
+// import HomeScreen from './screens/Homescreen'
+import { Container } from 'react-bootstrap';
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <Container className='my-2'>
+      <Outlet />
+        </Container>
+      
+      
+    </div>
   )
 }
 
